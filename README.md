@@ -1,8 +1,13 @@
 ## Preparing
-- Download the codes from this [Google Drive](https://drive.google.com/drive/folders/1yqt7SSi-CxQ3KAH8VbSePmbPf3KUD37a?usp=sharing).
+- Download the dataset and checkpoints (if needed) from following command:
+```bash
+sh download.sh
+```
 - Then, the folder structure should be similar to the one below, where the `dataset` folder is same as the one provided from TAs.
 
 ```
+|- checkpoints_roberta-chinese_qa
+|- checkpoints_roberta-chinese_squad
 |- dataset
     |- train.json
     |- valid.json
