@@ -16,6 +16,7 @@ Then, the folder structure should be similar to the one below, where the `datase
     
 |- preprocessing.py
 ```
+## Setup
 
 ## Preprocessing
 Please run the following command to transform the data format to adapt to the QA Training session.

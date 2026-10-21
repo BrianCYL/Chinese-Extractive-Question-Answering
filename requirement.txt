@@ -1,0 +1,10 @@
+accelerate
+datasets>=1.8.0
+evaluate
+gdown
+huggingface_hub
+numpy
+pandas
+torch
+tqdm
+transformers
