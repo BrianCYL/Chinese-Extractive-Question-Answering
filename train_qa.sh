@@ -1,0 +1,16 @@
+accelerate launch train_qa.py \
+  --model_name hfl/chinese-roberta-wwm-ext-large \
+  --train_file ./dataset/train_qa.json \
+  --validation_file ./dataset/valid_qa.json \
+  --max_seq_length 512 \
+  --per_device_train_batch_size 8 \
+  --per_device_eval_batch_size 8 \
+  --learning_rate 3e-5 \
+  --weight_decay 0.01 \
+  --doc_stride 256 \
+  --num_warmup_steps 500 \
+  --num_train_epochs 10 \
+  --gradient_accumulation_steps 8 \
+  --n_best_size 20 \
+  --output_dir ./checkpoints_roberta-chinese_qa/ \
+  --pad_to_max_length
