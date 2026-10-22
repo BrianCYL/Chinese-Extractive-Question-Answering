@@ -8,7 +8,7 @@ Download the dataset and checkpoints (if needed) from following command:
 ```bash
 bash download.sh
 ```
-Then, the folder structure should be similar to the one below, where the `dataset` folder is same as the one provided from TAs.
+Then, the folder structure should be similar to the one below:
 
 ```
 |- checkpoints_roberta-chinese_qa
@@ -18,8 +18,6 @@ Then, the folder structure should be similar to the one below, where the `datase
     |- valid.json
     |- test.json
     |- context.json
-    
-|- preprocessing.py
 ```
 
 ## Preprocessing
@@ -48,6 +46,7 @@ After running the above bash script, the trained model will be stored in a folde
 
 ## Train the RoBERTa Model for Question Answering Porblem
 Pleace run the following command:
+```
 bash train_qa.sh
 ```
 After running the above bash script, the trained model will be stored in a folder called `checkpoints_roberta_chinese_qa`, which is shown below.
