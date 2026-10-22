@@ -48,7 +48,6 @@ After running the above bash script, the trained model will be stored in a folde
 
 ## Train the RoBERTa Model for Question Answering Porblem
 Pleace run the following command:
-```
 bash train_qa.sh
 ```
 After running the above bash script, the trained model will be stored in a folder called `checkpoints_roberta_chinese_qa`, which is shown below.
@@ -65,4 +64,21 @@ Also the figure of the training loss curve and the evaluation metric curve are a
     |- training_tracking.pdf
     |- metric_tracking.pdf
     |- ...
+```
+
+## Inference
+Run the complete inference pipeline with the following command:
+```
+bash run.sh <context_file> <test_file> <output_dir>
+```
+
+- `<context_file>` is the JSON file containing the context paragraphs.
+- `<test_file>` is the JSON file containing the multiple-choice test examples.
+- `<output_dir>` is the directory where the final QA predictions will be saved.
+
+The pipeline first predicts the relevant paragraph with the multiple-choice model, writes `choices.npy` and `test_qa.json` under `./dataset`, and then extracts the answer with the QA model. The final predictions are saved as `predictions.csv` under `<output_dir>`.
+
+For example:
+```
+bash run.sh ./dataset/context.json ./dataset/test.json ./predictions
 ```
