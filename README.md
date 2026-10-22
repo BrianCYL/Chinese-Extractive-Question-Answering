@@ -75,9 +75,10 @@ bash run.sh <context_file> <test_file> <output_dir>
 - `<test_file>` is the JSON file containing the multiple-choice test examples.
 - `<output_dir>` is the directory where the final QA predictions will be saved.
 
-The pipeline first predicts the relevant paragraph with the multiple-choice model, writes `choices.npy` and `test_qa.json` under `./dataset`, and then extracts the answer with the QA model. The final predictions are saved as `predictions.csv` under `<output_dir>`.
-
 For example:
 ```
 bash run.sh ./dataset/context.json ./dataset/test.json ./predictions
 ```
+
+The pipeline first predicts the relevant paragraph with the multiple-choice model, writes `choices.npy` and `test_qa.json` under `./dataset`, and then extracts the answer with the QA model. The final predictions are saved as `predictions.csv` under `<output_dir>`.
+
